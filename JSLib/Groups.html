@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		var re = /#([0-9a-f]{3}){1,2}/gi
+		var subj = "color: #3f3; background-color: #AA00ef"
+		alert( subj.match(re) )  // #3f3,#AA00ef
+
+		alert('<span> <p>'.match(/<(.*?)>/g)); //<span>,</p>
+		alert('<span> <p>'.match(/<(.*?)>/)); //<span>,span
+		alert('<span class=my>'.match(/<(([a-z])[a-z0-9]*).*?>/));
+	</script>
+</body>
+</html>

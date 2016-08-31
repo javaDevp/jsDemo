@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<span style="color:#f00" id="hour">HH</span>:<span style="color:#0f0" id="minute">MM</span>:<span style="color:#00f" id="second">SS</span>
+	<br/>
+	<button id="start">Start</button> <button id="stop">Stop</button>
+	<script>
+		var startBtn = document.getElementById("start");
+		var stopBtn = document.getElementById("stop");
+		var hSpan = document.getElementById("hour");
+		var mSpan = document.getElementById("minute");
+		var sSpan = document.getElementById("second");
+		var timer;
+		startBtn.onclick = function(){
+			if(timer) return;
+			updateTime();
+			//timer = setInterval(updateTime, 1000);
+		}
+		
+		function updateTime(){
+			var d = new Date();
+			hSpan.innerHTML = d.getHours() / 10  > 1? d.getHours() : '0' + d.getHours();;
+			mSpan.innerHTML = d.getMinutes() / 10 > 1? d.getMinutes() : '0' + d.getMinutes();;
+			sSpan.innerHTML = d.getSeconds() / 10 > 1? d.getSeconds() : '0' + d.getSeconds();;
+			timer = setTimeout(updateTime, 1000);
+		}
+		
+		stopBtn.onclick = function(){
+			//clearInterval(timer);
+			clearTimeout(timer);
+		}
+	</script>
+</body>
+</html>

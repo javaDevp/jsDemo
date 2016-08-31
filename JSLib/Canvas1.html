@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		canvas.width = 600;
+		canvas.height = 300;
+		var context = canvas.getContext("2d");
+		context.fillRect(0, 0, 100, 100);
+		context.strokeRect(120, 0, 100, 100);
+		context.fillStyle = "#ff3377";
+		context.fillRect(240, 0, 100, 100);
+		context.strokeStyle = "#ff3377";
+		context.strokeRect(0, 120, 100, 100);
+		context.fillStyle = "green";
+		context.fillRect(120, 120, 100, 100);
+		context.strokeStyle = "green";
+		context.strokeRect(240, 120, 100, 100);
+		context.clearRect(17, 11, 306, 198);
+		
+	</script>
+</body>
+</html>

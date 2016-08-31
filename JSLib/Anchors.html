@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		showMatch( 
+  '1st: John\n' +
+  '2nd: Mary\n' +
+  '33rd: Peter\n', /^\d+/gm )  // 1, 2, 33
+  
+  showMatch( 
+  '1st: John\n' +
+  '2nd: Mary\n' +
+  '33rd: Peter\n', /\w+$/gm )  // 1, 2, 33
+		
+		showMatch( 
+  '1st: John\n' +
+  '2nd: Mary\n' +
+  '33rd: Peter\n', /\w+\n^\d+/gm )  // 1, 2, 33
+	</script>
+</body>
+</html>

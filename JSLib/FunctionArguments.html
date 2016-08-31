@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		(function(){
+			alert({}.toString.call(arguments));
+		})();
+		var arr = [1,  -2, 7, 3];
+		alert(Math.max.apply({}, arr));
+	</script>
+</body>
+</html>

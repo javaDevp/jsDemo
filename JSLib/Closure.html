@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		function f(){
+			x = 12;
+		}
+		f();
+		alert(x); //12
+		
+	/*	function sum(a){
+			return function(b){
+				return a + b;
+			}
+		}
+		alert(sum(1)(2));*/
+		
+		function sum(a){
+			var sum = a;
+			
+			function f(b){
+				sum += b;
+				return f;
+			}
+			
+			f.toString = function(){
+				return sum;
+			}
+			
+			return f;
+		}
+		
+		alert(sum(1)(2)(3));
+		
+		//approach 1
+		/*function makeArmy(){
+			var shooters = [];
+			for(var i = 0; i < 10; i++){
+				var shooter = function(){
+					alert(arguments.callee.i);
+				}
+				shooter.i = i;
+				shooters.push(shooter);
+			}
+			return shooters;
+		}*/
+		
+		// approach 2
+		/*function makeArmy(){
+			var shooters = [];
+			for(var i = 0; i < 10; i++){
+				var shooter = function(i){
+					return function(){
+						alert(i);
+					}
+				}(i)
+				shooters.push(shooter);
+			}
+			return shooters;
+		}*/
+		
+		//approach 3
+		function makeArmy(){
+			var shooters = [];
+			for(var i = 0; i < 10; i++){
+				(function(i){
+					var shooter = function(){
+						alert(i);
+					}
+					shooters.push(shooter);
+				})(i);
+			}
+			return shooters;
+		}
+		
+		var army = makeArmy();
+		var shooter = army[0];
+		shooter();
+		shooter = army[5];
+		shooter();
+	</script>
+</body>
+</html>

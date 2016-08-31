@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+<style type="text/css">
+	div{
+		height:18px;
+		background-color:green;
+		margin:1px;
+	}
+</style>
+</head>
+<body>
+	<button id="stop">Stop</button>
+	<script>
+		onload = function(){
+			for(var i = 0; i < 20; i += 2){
+				var div = document.createElement("div");
+				//div.style.width = 5 * i + "px";
+				document.body.appendChild(div);
+				animateDiv(div, i);
+			}
+		}
+		
+		function animateDiv(div, i){
+			var timer = setInterval(function(){
+				div.style.width = (parseInt(div.style.width || 0) + 5) % 400 + "px";
+			}, i);
+			
+			var stopBtn = document.getElementById("stop");
+			var prev = stopBtn.onclick;
+			stopBtn.onclick = function(){
+				clearInterval(timer);
+				prev && prev();
+			}
+		}
+	</script>
+</body>
+</html>

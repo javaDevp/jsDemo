@@ -1,0 +1,23 @@
+<!Doctype>
+<html><head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head><body>
+
+
+<script>
+  
+  function dog(){
+  }
+  
+  var dog1 = new dog();
+  alert(dog1.constructor === dog);
+  alert(dog1.hasOwnProperty('constructor'));
+  alert(dog.prototype.hasOwnProperty('constructor'));
+  
+  var foo = {
+	constructor:"foo";
+  }
+  inherit("foo");
+</script>
+
+</body></html>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+	<div id="test"></div>
+	<script>
+		//IE8:对象不支持此属性或方法，variable test references Div
+		//in IE the auto-generated variable is an internal reference that can’t be changed.
+		test = 1;
+		alert(test);
+		
+		//Firefox: SyntaxError: class is a reserved identifier
+		var class= 5;
+		alert(class);
+	</script>
+</body>
+</html>

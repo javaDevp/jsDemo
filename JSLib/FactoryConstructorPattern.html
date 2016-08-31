@@ -1,0 +1,46 @@
+<!Doctype>
+<html><head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head><body>
+
+
+<script>
+  function Animal(name){
+	return {
+		run: function(){
+			alert(name + " is runing!");
+		}
+	}
+  }
+  function Rabbit(name) {
+    
+	  var rabbit = Animal(name) // make animal
+
+	  rabbit.bounce = function() { // mutate
+		this.run()
+		alert(name + " bounces to the skies! :)")
+	  }
+
+	return rabbit // return the result
+  }
+
+var rabbit = Rabbit("rab")
+rabbit.bounce()
+
+	function Bird(name) {
+    
+		var speed = 100                    // private prop
+		function openWings() { /* ... */ } // private method
+
+		return {
+		  fly: function() {
+			openWings()
+			this.move()
+		  },
+		  move: function() { /*...*/ }    
+		}
+    }
+
+</script>
+
+</body></html>

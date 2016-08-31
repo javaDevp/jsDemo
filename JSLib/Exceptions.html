@@ -1,0 +1,30 @@
+<!DOCTYLE HTML>
+<html>
+<body>
+
+<script>
+try{
+	func();
+}catch(e){
+	alert("name:" + e.name + "\nmessage:" + e.message);
+	alert(e.stack); //IE: undefined
+}
+
+function inc(a) {
+
+  try {
+    return a+1
+  } catch(e) {
+    // ..
+  } finally {
+    alert('done')
+  }
+}
+
+alert( inc(1) )
+
+</script>
+
+
+</body>
+</html>

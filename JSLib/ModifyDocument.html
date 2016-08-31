@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<div>...</div>
+	<ul></ul>
+	<script>
+		var text = "<b>tags</b>";
+		var ul = document.body.children[1];
+		document.body.children[0].appendChild(document.createTextNode(text));
+		
+		document.body.children[0].innerHTML = text;
+		alert(html2text(text));
+		
+		var span = document.createElement("span");
+		span.innerHTML = "A new span";
+		var div = document.body.children[0];
+		div.insertBefore(span, div.firstChild);
+		
+		function remove(ele){
+			return ele.parentNode.removeChild(ele);
+		}
+		
+		remove(div);
+		
+		
+		var list = [];
+		var content;
+		while((content = prompt("Please input the content", "")) != null){
+			var li = document.createElement("li");
+			content = document.createTextNode(content);
+			li.appendChild(content);
+			ul.appendChild(li);
+		}
+	</script>
+</body>
+</html>

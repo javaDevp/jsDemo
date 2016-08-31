@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+	<script>
+		alert(ucFirst("hello"));
+		function ucFirst(str){
+			var result = str.charAt(0).toUpperCase();
+			for(var i = 1; i < str.length; i++){
+				result += str.charAt(i);
+			}
+			return result;
+		}
+		alert(checkSpam('buy ViAgRA now'));
+		alert(checkSpam('free xxxxx'));
+		alert(checkSpam("innocent rabbit")); 
+		function checkSpam(str){
+			if(~str.toLowerCase().indexOf('viagra') || ~str.toUpperCase().indexOf('XXX')){
+				return true;
+			}
+		}
+		alert(truncate("and here is what I want to say on that matter:", 20));
+		function truncate(str, maxlength){
+			if(str.length <= maxlength){
+				return str;
+			} else{
+				return str.substr(0, maxlength - 4) + " ...";
+			}
+		}
+		alert("String properties: length");
+		alert("String methods: charAt, toLowerCase, toUpperCase, indexOf, substr, substring, slice");
+		
+	</script>
+</body>
+</html>

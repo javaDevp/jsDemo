@@ -1,0 +1,39 @@
+<html><head>
+  <title>Image gallery</title>
+  <link rel="stylesheet" type="text/css" href="gallery.css">
+</head>
+
+<body>
+
+<p><img id="largeImg" src="http://javascript.info/files/tutorial/browser/events/gallery/img2-lg.jpg" alt="Image 2"></p>
+
+<div id="thumbs">
+  <!-- title activates embedded browser tooltip -->
+  <a href="http://javascript.info/files/tutorial/browser/events/gallery/img2-lg.jpg" title="Image 2"><img src="http://javascript.info/files/tutorial/browser/events/gallery/img2-thumb.jpg"></a>
+  <a href="http://javascript.info/files/tutorial/browser/events/gallery/img3-lg.jpg" title="Image 3"><img src="http://javascript.info/files/tutorial/browser/events/gallery/img3-thumb.jpg"></a>
+  <a href="http://javascript.info/files/tutorial/browser/events/gallery/img4-lg.jpg" title="Image 4"><img src="http://javascript.info/files/tutorial/browser/events/gallery/img4-thumb.jpg"></a>
+  <a href="http://javascript.info/files/tutorial/browser/events/gallery/img5-lg.jpg" title="Image 5"><img src="http://javascript.info/files/tutorial/browser/events/gallery/img5-thumb.jpg"></a>
+  <a href="http://javascript.info/files/tutorial/browser/events/gallery/img6-lg.jpg" title="Image 6"><img src="http://javascript.info/files/tutorial/browser/events/gallery/img6-thumb.jpg"></a>
+</div>
+
+<script>
+var largeImg = document.getElementById('largeImg')
+		
+document.getElementById('thumbs').onclick = function(e) {
+  e = e || window.event
+  var target = e.target || e.srcElement
+
+  if (target.nodeName != 'IMG') return
+
+  var anchor = target.parentNode
+	
+  largeImg.src = anchor.href
+  largeImg.alt = anchor.title
+			
+  return false
+}
+</script>
+
+
+
+</body></html>

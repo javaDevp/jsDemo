@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		canvas.width = 600;
+		canvas.height = 600;
+		var ctx = canvas.getContext("2d");
+		var linear = ctx.createLinearGradient(100, 100, 200, 100);
+		linear.addColorStop(0, '#fff');
+		linear.addColorStop(0.5, '#f0f');
+		linear.addColorStop(1, '#333');
+		ctx.fillStyle = linear;
+		ctx.fillRect(100, 100, 100, 100);
+		
+		var radial = ctx.createRadialGradient(300, 300, 50, 300, 300, 100);
+		radial.addColorStop(0, "#fff");
+		radial.addColorStop(0.5, "#ff0");
+		radial.addColorStop(1, "#00f");
+		ctx.fillStyle = radial;
+		ctx.fillRect(200, 200, 200, 200);
+	</script>
+</body>
+</html>

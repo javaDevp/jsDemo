@@ -1,0 +1,44 @@
+<!Doctype>
+<html><head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head><body>
+
+
+<script>
+  var animal = {eat:function(){
+	alert("I'm full");
+	this.full = true;
+  }};
+  var rabbit = {jump:true};
+ /* rabbit.__proto__ = animal; //IE不支持
+  rabbit.eat();
+  alert(rabbit.full); //true
+  alert(animal.full); //undefined */
+  
+  var cat = Object.create(animal);
+  cat.eat();
+  alert(Object.getPrototypeOf(cat) == animal);
+  
+  function dog(){
+  }
+  
+  function frog(){
+	this.prototype = {name:"jack"};
+  }
+  
+  dog.prototype = animal;
+  var dog1 = new dog();
+  var frog1 = new frog();
+  dog1.eat();
+  
+  var bird = inherit(animal);
+  bird.eat();
+  alert(bird.__proto__ === animal); //true
+  alert({}.__proto__ == Object.prototype); //true
+  alert({}.__proto__.__proto__); //null
+  
+  alert(dog1.__proto__ === dog.prototype); //true
+  alert(frog1.__proto__ === frog.prototype); //true
+</script>
+
+</body></html>

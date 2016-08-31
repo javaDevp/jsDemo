@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<input type="text" value="markup"/>
+	<script>
+		document.body.myData = {
+			name:"john"
+		};
+		alert(document.body.myData.name);
+		document.body.children[0].value = "hello";
+		alert(document.body.children[0].getAttribute("value")); //markup上面不能变成setAttribute
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		var a = {
+			valueOf: function(){ return 1;}
+		}
+		var b = {
+			valueOf: function(){ return 0;}
+		}
+		alert(a > b);
+		
+		alert(['x'] == 'x');
+		
+		if("0" == 0){
+			alert("oh my god");
+		}
+		alert([0] == 0);
+		alert("\n0\n" == 0);
+		alert("\n0\n" == false);
+		
+		if([0]){
+			alert(1);
+		}
+		if("\n0\n"){
+			alert(2);
+		}
+		
+		alert(6/"3");
+	</script>
+</body>
+</html>

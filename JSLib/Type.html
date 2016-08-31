@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		alert(typeof {});
+		alert(typeof []);
+		alert(typeof new Date);
+		
+		var toClass = {}.toString;
+		alert(toClass.call([1, 2]));
+		alert(toClass.call(new Date));
+		alert(toClass.call(undefined));
+		
+		alert("" instanceof String); //false
+		alert(new String("") instanceof String); //true
+	</script>
+</body>
+</html>

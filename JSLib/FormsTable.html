@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<form name="my">
+		<input name="one" value="one"/>
+		<input name="two" value="two"/>
+	</form>
+	<script>
+		var form = document.forms.my;
+		var ele = form.elements.one;
+		alert(ele.value);
+		alert(ele.form == form);//true
+	</script>
+</body>
+</html>

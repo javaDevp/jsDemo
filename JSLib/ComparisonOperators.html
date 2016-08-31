@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+	<script>
+		//false
+		alert(2 == true);
+		//true, because true converts to 1
+		alert(1 == true);
+		var inputVal = prompt("Please input a number", 0);
+		if(inputVal > 0){
+			alert(1);
+		} else if(inputVal < 0){
+			alert(-1);
+		} else if(inputVal == 0){
+			alert(0);
+		} else {
+			alert("Invalid Input!");
+		}
+		
+		var name = prompt("Please input your name", "");
+		if(name == "Monty"){
+			var password = prompt("Please input your password", "");
+			if(password == "Cheese"){
+				alert("Access granted");
+			}else{
+				alert("Wrong password");
+			}
+		} else if(name != "null"){
+			alert("Wrong login");
+		} else{
+		}
+	</script>
+</body>
+</html>

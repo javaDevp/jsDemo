@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+<style> /* basic style */
+.widget { 
+  background-color: #ffe4c4;   
+  width: 500px;
+}
+
+#today-header {
+  background-color: #5f9ea0;
+  margin: 0;
+}
+</style>
+<style>
+	.widget{
+		/*position:relative;
+		left: 30px;
+		top: -30px;*/
+		
+		border:1px solid black;
+		position:absolute;
+		right:0;
+		bottom:0;
+		/*position:relative;*/
+	}
+	
+	#today-header{
+		position:absolute;
+		top:0;
+		right:0;
+	}
+	.pc{
+		position:relative;
+		width:200px;
+		height:30px;
+		line-height:30px;
+		background-color:#ff0;
+	}
+	
+	.bc{
+		position:absolute;
+		background-color:#fff;
+		top:30px;
+	}
+</style>
+
+<h1>Static positioning</h1>
+
+<div class="widget">
+    The widget header.
+
+    <h1 id="today-header">Information</h1>
+
+    <p>A new byte-code standard is defined for JavaScript... <br/>
+         Ok, just dreaming.</p>
+</div>
+
+The footer.
+
+<p class="pc">Do you really want it?<button class="bc">Yes!</button></p>
+
+<p>Text Text Text Text Text Text </p>
+<p>Text Text Text Text Text Text </p>
+<p>Text Text Text Text Text Text </p>
+<script>
+	document.getElementsByTagName("button")[0].style.right = 0;
+</script>
+</body>
+</html>

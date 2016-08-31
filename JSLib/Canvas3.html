@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		canvas.width = 600;
+		canvas.height = 600;
+		var context = canvas.getContext("2d");
+		//context.beginPath();
+		context.arc(150, 300, 100, 0, Math.PI / 2, false); //顺时针
+		
+		/** 坐标参考线 **/
+		/*context.moveTo(300, 0);
+		context.lineTo(300, 600);
+		context.moveTo(0, 300);
+		context.lineTo(600, 300);*/
+		/****/
+		context.stroke(); //弧形，非封闭
+		context.fillStyle = "red";
+		context.fill();
+		context.closePath();
+		//context.stroke(); //封闭
+		
+		context.beginPath();
+		context.arc(450, 300, 100, 0, Math.PI / 2, false); //顺时针
+		context.stroke(); //弧形，非封闭
+		context.fillStyle = "red";
+		context.fill();
+		context.closePath();
+	</script>
+</body>
+</html>

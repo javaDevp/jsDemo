@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		alert(123..toFixed(3));
+		var ladder = {
+			step: 0,
+			up: function(){
+				this.step++;
+				return this;
+			},
+			down: function(){
+				this.step--;
+				return this;
+			},
+			showStep: function(){
+				alert(this.step);
+			}
+		}
+		ladder.up().up().down().up().down().showStep();
+	
+		function Summator() {
+			this.sum = function(a, b){
+				return a + b;
+			};
+			this.run = function(){
+				var a = prompt("Please input a number", 0);
+				var b = prompt("Please input another number", 0);
+				if(isNumeric(a) && isNumeric(b)){
+					alert(this.sum(+a, +b));
+				} else{
+					alert("Wrong input");
+				}
+			}
+		}
+		new Summator().run();
+		
+		var menu = {
+			width: "200",
+			height: "300",
+			title: "My menu"
+		};
+		multiplyNumeric(menu);
+		alert(menu.width);
+		alert(menu.height);
+		var obj = {};
+		obj.name = "jack";
+		alert(obj.name);
+		delete(obj.name);
+		alert(obj.name);
+		
+		function multiplyNumeric(obj){
+			for(var key in obj){
+				if(isNumeric(obj[key])){
+					obj[key] *= 2;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

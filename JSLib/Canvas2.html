@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		canvas.width = 600;
+		canvas.height = 600;
+		var context = canvas.getContext("2d");
+		context.beginPath();
+		context.arc(300, 300, 100, 0, Math.PI * 2 / 3, false);
+		context.moveTo(300, 0);
+		context.lineTo(300, 600);
+		context.moveTo(0, 300);
+		context.lineTo(600, 300);
+		context.stroke();
+		context.fillStyle="red";
+		context.fill();
+		context.closePath();
+		
+	</script>
+</body>
+</html>

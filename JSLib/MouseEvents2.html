@@ -1,0 +1,30 @@
+<html><head></head><body>
+<div style="padding:10px;border: 1px solid blue" id="parent">
+ <p>Move the mouse in and outside of here. The blue box parent has <i>many</i> other <b>elements</b> inside.</p>
+ <p>They do not generate extra `mouseover/mouseout` events.</p>
+</div>Wed Nov 05 2014 14:44:06 GMT+0800 (中国标准时间) mouseout<script>
+function isOutside(evt, parent) {
+  var elem = evt.relatedTarget || evt.toElement || evt.fromElement
+
+  while ( elem && elem !== parent) {
+    elem = elem.parentNode;
+  }
+
+  if ( elem !== parent) {
+    return true
+  }
+}
+
+var parent = document.getElementById('parent')
+
+parent.onmouseover = parent.onmouseout = function(e) {
+  e = e || event
+  
+  if (isOutside(e, this)) {
+    parent.nextSibling.nodeValue = new Date() + ' ' + e.type 
+  } 
+}   
+</script>
+
+
+</body></html>

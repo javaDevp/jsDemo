@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		//? => {0, 1}
+		showMatch("second", /secou?nd/);
+		showMatch("secound", /secou?nd/);
+		var tagReg = /<\/?[a-z][0-9a-z]*>/gi;
+		showMatch("<h1>...</h1>", tagReg);
+		var decimalPointReg = /-?\d+\.\d+/g;
+		var str = "1.5 0 123 -7 -0.4";
+		alert(str.match(decimalPointReg));
+		
+		var posDecimalReg = /\d+(\.\d+)?/g;
+		var str = "1.5 0 123";
+		alert(str.match(posDecimalReg));
+	</script>
+</body>
+</html>

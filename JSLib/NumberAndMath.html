@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		alert(isFinite("12.3"));
+		alert(roundWithPrecision(12.3456, 3));
+		alert(12.7^0); //12
+		alert(isNumeric("123Hell"));
+		var num1 = prompt("Please input a number", 0);
+		var num2 = prompt("Please input the second number", 0);
+		alert("The sun of " + num1 + " and " + num2 + " is " + ((+num1) + (+num2)));
+		alert(0.1 + 0.2 == 0.3);
+		alert(0.1.toFixed(20));
+		alert(0.1 + 0.2);  //0.3000000000000004
+		alert((0.1 + 0.2).toFixed(10)); //0.3000000000
+		alert(+(0.1 + 0.2).toFixed(10)); //0.3
+		alert(+0.4.toFixed(10)); //4e-12
+		alert(1/0);
+		alert(-1/0);
+		alert(0/0);
+	</script>
+</body>
+</html>

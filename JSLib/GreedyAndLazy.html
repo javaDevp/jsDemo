@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		showMatch('a "witch" and her "broom" is one', /".*"/g);  //"witch" and her "broom"
+		
+		showMatch('a "witch" and her "broom" is one', /".*?"/g); //"witch","broom"
+		
+		showMatch(" item 1a ", /\d\w?/); // 1a
+		showMatch(" item 1a ", /\d\w??/); // 1
+		showMatch("123 456", /\d+ \d+?/); // 123 4
+		
+		var commentReg = /<!--[\s\S]*?-->/g;  //注意\n
+		str = '.. <!-- My -- comment \n test --> ..  <!----> .. ';
+		alert(str.match(commentReg));
+		
+		var reg = /<[a-z][a-z0-9]* ?[\s\S]*?>/g;
+		var str2 = '<> <a href="/"> <input type="radio" checked> <b>';
+		alert(str2.match(reg));
+	</script>
+</body>
+</html>

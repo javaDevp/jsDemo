@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		showMatch("I'm 12345678 years old", /\d{3,}/);
+		var re = /#[\dA-F]{6}/gi;
+		var subj = "color: #121212; background-color: #AA00ef; \
+			width: 12px; bad-color: f#fddee #fd2";
+		alert(subj.match(re));
+		alert("#12345678".match(re));
+	</script>
+</body>
+</html>

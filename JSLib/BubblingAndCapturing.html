@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style> 
+.d1{
+	background-color:green;
+	width:200px;
+	height:200px;
+	position:relative;
+	cursor:pointer;
+	text-align:center;
+}
+
+.d2{
+	position:absolute;
+	top:25px;
+	left:25px;
+	background-color:blue;
+	width:150px;
+	height:150px;
+	text-align:center;
+}
+
+.d3{
+	position:absolute;
+	top:25px;
+	left:25px;
+	background-color:red;
+	width:100px;
+	height:100px;
+	text-align:center;
+}
+</style>
+</head>
+<body>
+
+<div class="d1" onclick="hightlignt(this)">
+1
+	<div class="d2" onclick="hightlignt(this)">
+		2
+		<div class="d3" onclick="hightlignt(this)">
+		3
+		</div>
+	</div>
+</div>
+
+<script>
+	function hightlignt(obj){
+		obj.style.backgroundColor = "yellow";
+		alert(obj.innerHTML);
+		obj.style.backgroundColor = "";
+	}
+</script>
+
+
+</body>
+</html>

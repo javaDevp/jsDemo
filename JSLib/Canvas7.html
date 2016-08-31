@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		canvas.width = 600;
+		canvas.height = 600;
+		var ctx = canvas.getContext("2d");
+		ctx.beginPath();
+		ctx.moveTo(0, 0);
+		ctx.lineTo(300, 300);
+		ctx.stroke();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.moveTo(0, 0);
+		ctx.quadraticCurveTo(0, 600, 300, 300);
+		ctx.stroke();
+		ctx.closePath();
+	</script>
+</body>
+</html>

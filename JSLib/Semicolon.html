@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+	<script>
+		//IE:   SCRIPT1015: 未结束的字符串常量
+		//Firefox:    SyntaxError: unterminated string literal
+		//Chrome:   Uncaught SyntaxError: Unexpected token ILLEGAL 
+		/*var a = "Empty spaces - what are we living for?
+			Abandoned places - I guess we know the score..
+			On and on!
+			Does anybody know what we are looking for?";
+		alert(a);*/
+		var a = "Empty spaces - what are we living for?\
+			Abandoned places - I guess we know the score..\
+			On and on!\
+			Does anybody know what we are looking for?";
+		alert(a);
+	</script>
+</body>
+</html>

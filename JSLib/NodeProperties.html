@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		//The minor pitfall is that at the time of script execution, the last child is the SCRIPT itself.
+		//alert(document.body.lastChild.nodeType); 
+		//#document
+		//alert(document.nodeName);
+		document.body.innerHTML += '<img src="bk.png"/>';
+		document.body.innerHTML += "World!";
+	</script>
+</body>
+</html>

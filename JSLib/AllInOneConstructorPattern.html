@@ -1,0 +1,53 @@
+<!Doctype>
+<html><head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head><body>
+
+
+<script>
+  
+ /* function Animal(name){
+	this.name = name;
+	this.run = function(){
+		alert("running " + this.name);
+	}
+  }
+  
+  function Rabbit(name){
+	Animal.apply(this, arguments);
+	this.bounce = function(){
+		alert("bouncing " + this.name);
+	} 
+  }
+  
+  var rabbit = new Rabbit("Rab");
+  rabbit.bounce();
+  rabbit.run();
+  alert(Rabbit.prototype.bounce);  //undefined*/
+  function Animal(name){
+	this.name = name;
+	this.run = function(){
+		alert("running " + this.name);
+	}
+  }
+  
+  function Rabbit(name){
+	Animal.call(this, "Mr. " + name.toUpperCase());
+	
+	var created = new Date(); //private;
+	
+	function sayHi(){ //private
+		alert("I am talking rabbit " + name);
+	}
+	
+	this.report = function(){
+		sayHi.apply(this);
+		alert("Created at " + created);
+	}
+  }
+  
+  rabbit = new Rabbit("Rad");
+  rabbit.report();
+</script>
+
+</body></html>

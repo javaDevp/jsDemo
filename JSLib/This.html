@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		func();
+		
+		function func(){
+			"use strict"
+			alert(this);   //alert undefined in firefox if "use strict" else [object Window]
+		}
+		
+		obj = {
+			go: function() { alert(this); }
+		}
+		
+		obj.go();
+		(obj.go)();
+		(a = obj.go)();
+		(0 || obj.go)();
+		
+		var john = {
+			firstName: "John"
+		}
+		function fnc2(){
+			alert(this.firstName);
+		}
+		fnc2.call(john);
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		function f(){
+			//approach 1
+			//f.count = ++f.count || 1;
+			//approach 2
+			arguments.callee.count = ++ arguments.callee.count || 1;
+			alert("Call No " + f.count);
+		}
+		
+		f();
+		f();
+	</script>
+</body>
+</html>

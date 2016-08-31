@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="LordMe.js"></script>
+</head>
+<body>
+	<script>
+		if("a" in window){
+			var a = 1;
+		}
+		alert(a);  //1
+		
+		if("b" in window){
+			b = 1;
+		}
+		//alert(b); //b is not defined
+		
+		for(var i = 0; i < 5; i++){}
+		alert(i); //5
+	</script>
+</body>
+</html>

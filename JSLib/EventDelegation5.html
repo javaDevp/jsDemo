@@ -1,0 +1,27 @@
+<html><head></head><body>
+<div id="menu">
+  <button data-action="Save">Click to Save</button>
+  <button data-action="Load">Click to Load</button>
+</div>
+
+<script>
+function Menu(elem) {
+  this.onSave = function() { alert('saving') }
+  this.onLoad = function() { alert('loading') }
+
+  var self = this
+
+  elem.onclick = function(e) {
+    var target = e && e.target || event.srcElement
+var action = target.getAttribute('data-action')
+    if (action) {
+      self["on"+action]()
+    }
+  }
+}
+
+new Menu(document.getElementById('menu'))
+</script>
+
+
+</body></html>
