@@ -98,6 +98,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="note\js_note.xlsx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -124,6 +125,11 @@
     <Content Include="ComparisonOperators.html" />
     <Content Include="Constructor.html" />
     <Content Include="Conversion.html" />
+    <Content Include="css\bagua.css" />
+    <Content Include="css\button.css" />
+    <Content Include="css\gallery.css" />
+    <Content Include="css\menu.css" />
+    <Content Include="css\messages.css" />
     <Content Include="Date.html" />
     <Content Include="Decorator.html" />
     <Content Include="EarlyAndLastBinding.html" />
@@ -142,6 +148,7 @@
     <Content Include="Groups.html" />
     <Content Include="HelloWorld.html" />
     <Content Include="Home.html" />
+    <Content Include="img\bk.png" />
     <Content Include="InfiniteBacktracing.html" />
     <Content Include="Initialization.html" />
     <Content Include="LoopsAndSwitch.html" />
@@ -163,6 +170,9 @@
     <Content Include="Quantifiers.html" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="scripts\ajax_tb.js" />
+    <Content Include="scripts\fixSlice.js" />
+    <Content Include="scripts\LordMe.js" />
     <Content Include="scripts\touha.js" />
     <Content Include="Semicolon.html" />
     <Content Include="SpecialCharacter.html" />
